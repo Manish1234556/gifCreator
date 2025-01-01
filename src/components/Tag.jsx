@@ -36,7 +36,7 @@ export default function Tag() {
       </h1>
 
       {loading ? <Spinner /> : <img src={gif} width="450" />}
-      <img src={gif} className="w-[450px] h-[0px]" />
+      
 
       <input
         onChange={(event) => setTag(event.target.value)}
@@ -44,7 +44,7 @@ export default function Tag() {
         value={tag}
       />
       <button
-        onClick={() => fetchData()}
+        onClick={() => fetchData(tag)}
         className="mb-[20px] w-10/12 bg-yellow-500 text-lg py-2 rounded-lg"
       >
         Generate
